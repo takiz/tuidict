@@ -6,7 +6,7 @@ Used [tview](https://github.com/rivo/tview) library
 ## Installation
 
 1) install sdcv https://github.com/Dushistov/sdcv  
-2)
+2) install [go](https://github.com/golang/go) v1.13 or later and then
 ```
 go get -u github.com/takiz/tuidict
 ```
