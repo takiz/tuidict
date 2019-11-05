@@ -134,7 +134,7 @@ func main() {
  F1 or Ctrl+X — quit.
  F2 or Ctrl+E — change focus between main input field and text.
  F3 or Ctrl+D — dictionaries navigation if a word or phrase are founded.
- F4 or Ctrl+H — history.
+ F4 or Ctrl+T — history.
  F5 or Ctrl+P — pronounce word if it exists in the installed sound base (see the color of the indicator next to the input field).
  F7 or Ctrl+F — search in the text.
  Use the -h command line flag for more information.`)
@@ -193,7 +193,7 @@ func SetMainInput() {
 			}
 		case tcell.KeyF3, tcell.KeyCtrlD:
 			ShowDropdown(DICT)
-		case tcell.KeyF4, tcell.KeyCtrlH:
+		case tcell.KeyF4, tcell.KeyCtrlT:
 			ShowDropdown(HISTORY)
 		case tcell.KeyF5, tcell.KeyCtrlP:
 			SoundPlay()

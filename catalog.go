@@ -36,7 +36,7 @@ func init() {
 }
 
 var messageKeyToIndex = map[string]int{
-	" Welcome!\n\n Arrows/PageUp/PageDown/Home/End — text scrolling.\n F1 or Ctrl+X — quit.\n F2 or Ctrl+E — change focus between main input field and text.\n F3 or Ctrl+D — dictionaries navigation if a word or phrase are founded.\n F4 or Ctrl+H — history.\n F5 or Ctrl+P — pronounce word if it exists in the installed sound base (see the color of the indicator next to the input field).\n F7 or Ctrl+F — search in the text.\n Use the -h command line flag for more information.": 8,
+	" Welcome!\n\n Arrows/PageUp/PageDown/Home/End — text scrolling.\n F1 or Ctrl+X — quit.\n F2 or Ctrl+E — change focus between main input field and text.\n F3 or Ctrl+D — dictionaries navigation if a word or phrase are founded.\n F4 or Ctrl+T — history.\n F5 or Ctrl+P — pronounce word if it exists in the installed sound base (see the color of the indicator next to the input field).\n F7 or Ctrl+F — search in the text.\n Use the -h command line flag for more information.": 8,
 	"Change focus": 10,
 	"Close":        15,
 	"Creating autocompletion cache... Please, wait.": 17,
@@ -74,7 +74,7 @@ const enData string = "" + // Size: 828 bytes
 	" or phrase\x04\x01 \x00\xdd\x03\x02Welcome!\x0a\x0a Arrows/PageUp/PageDo" +
 	"wn/Home/End — text scrolling.\x0a F1 or Ctrl+X — quit.\x0a F2 or Ctrl+E " +
 	"— change focus between main input field and text.\x0a F3 or Ctrl+D — d" +
-	"ictionaries navigation if a word or phrase are founded.\x0a F4 or Ctrl+H" +
+	"ictionaries navigation if a word or phrase are founded.\x0a F4 or Ctrl+T" +
 	" — history.\x0a F5 or Ctrl+P — pronounce word if it exists in the instal" +
 	"led sound base (see the color of the indicator next to the input field)." +
 	"\x0a F7 or Ctrl+F — search in the text.\x0a Use the -h command line flag" +
@@ -99,7 +99,7 @@ const ruData string = "" + // Size: 1505 bytes
 	"жаловать!\x0a\x0a Arrows/PageUp/PageDown/Home/End — перемотка текста." +
 	"\x0a F1 или Ctrl+X — выход.\x0a F2 или Ctrl+E — сменить фокус между поле" +
 	"м ввода и текстом.\x0a F3 или Ctrl+D — навигация по словарям, если найд" +
-	"ено слово или фраза.\x0a F4 или Ctrl+H — история.\x0a F5 или Ctrl+P — п" +
+	"ено слово или фраза.\x0a F4 или Ctrl+T — история.\x0a F5 или Ctrl+P — п" +
 	"роизнести слово, если оно есть в установленной звуковой базе (см. цвет " +
 	"индикатора рядом с полем ввода).\x0a F7 или Ctrl+F — поиск в тексте." +
 	"\x0a Используйте опцию командной строки -h для показа дополнительной инф" +
@@ -107,4 +107,4 @@ const ruData string = "" + // Size: 1505 bytes
 	"\x02Поиск\x02Закрыть\x02Следующий\x02Создаётся кэш для автодополнения..." +
 	" Пожалуйста, ждите.\x02Выбрать\x02Найдено в словарях"
 
-	// Total table size 2549 bytes (2KiB); checksum: A3E8121B
+	// Total table size 2549 bytes (2KiB); checksum: 57AB5BEB
