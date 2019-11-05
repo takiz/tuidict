@@ -321,6 +321,7 @@ func CheckHash() bool {
 	var save bool
 	var f *os.File
 	var err error
+	res := true
 	hash := make([]byte, 0, 1)
 	hashCurrent := make([]byte, 0, 1)
 	d := configDir + "dicts"
@@ -349,15 +350,20 @@ func CheckHash() bool {
 			hashCurrent = append(hashCurrent, h[:]...)
 		}
 	}
-	if save {
+	update := func() {
 		if err := ioutil.WriteFile(d, hashCurrent, 0644); err != nil {
 			log.Fatal(err)
 		}
-	} else if bytes.Compare(hash, hashCurrent) != 0 {
-		// CacheWords()
-		return false
 	}
-	return true
+	if save {
+		update()
+	} else if bytes.Compare(hash, hashCurrent) != 0 {
+		update()
+		// CacheWords()
+		res = false
+	}
+
+	return res
 }
 
 func SetAutocompletion() {
@@ -511,10 +517,8 @@ func ShowDropdown(r int) {
 		if len(History) == 0 {
 			return
 		}
-	} else {
-		if len(FoundDict) == 0 {
-			return
-		}
+	} else if len(FoundDict) == 0 {
+		return
 	}
 	MainGrid.RemoveItem(Hotkeys)
 	focus := App.GetFocus()
