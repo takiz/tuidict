@@ -80,7 +80,7 @@ func SetOpts() {
 	flag.Parse()
 	SoundPath = strings.TrimSuffix(*sound, "/") + "/"
 	DictPath = strings.TrimSuffix(*dict, "/") + "/"
-	os.Setenv("STARDICT_DATA_DIR", strings.Trim(DictPath, "\"'"))
+	os.Setenv("STARDICT_DATA_DIR", DictPath)
 	SdcvArgs = make([]string, 0, 1)
 	SdcvArgs = append(SdcvArgs, "-n")
 	if !*nocolor {
