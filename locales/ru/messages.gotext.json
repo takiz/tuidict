@@ -22,9 +22,9 @@
             "translation": "Указать проигрыватель аудио"
         },
         {
-            "id": "Set sdcv custom arguments",
-            "message": "Set sdcv custom arguments",
-            "translation": "Указать аргументы для sdcv"
+            "id": "Disable sdcv text colors",
+            "message": "Disable sdcv text colors",
+            "translation": "Отключить цветной текст для sdcv"
         },
         {
             "id": "Disable autocompletion",

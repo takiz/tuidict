@@ -73,14 +73,19 @@ func SetOpts() {
 	sound := flag.String("sound-dir", "/usr/share/stardict/sounds", P("Set the directory with sound files"))
 	dict := flag.String("dict-dir", "/usr/share/stardict/dic", P("Set the directory with dictionary files"))
 	player := flag.String("player", "mpv", P("Set audio player"))
-	sdcv := flag.String("sdcv", "-c -n", P("Set sdcv custom arguments"))
+	nocolor := flag.Bool("nocolor", false, P("Disable sdcv text colors"))
 	flag.BoolVar(&NoAutocompletion, "noauto", false, P("Disable autocompletion"))
 	version := flag.Bool("version", false, P("Print current version"))
 
 	flag.Parse()
 	SoundPath = strings.TrimSuffix(*sound, "/") + "/"
 	DictPath = strings.TrimSuffix(*dict, "/") + "/"
-	SdcvArgs = strings.Split(*sdcv, " ")
+	os.Setenv("STARDICT_DATA_DIR", strings.Trim(DictPath, "\"'"))
+	SdcvArgs = make([]string, 0, 1)
+	SdcvArgs = append(SdcvArgs, "-n")
+	if !*nocolor {
+		SdcvArgs = append(SdcvArgs, "-c")
+	}
 	Player = strings.Split(*player, " ")
 	var err error
 	if _, err = exec.LookPath("sdcv"); err != nil {
@@ -96,14 +101,16 @@ func SetOpts() {
 	if os.Getenv("TUIDICT_NOAUTO") == "1" {
 		NoAutocompletion = true
 	}
-	SoundFiles, err := ioutil.ReadDir(SoundPath)
-	if err != nil {
-		panic(err)
-	}
-	SoundDirs = make([]string, 0, len(SoundFiles))
-	for _, file := range SoundFiles {
-		if file.IsDir() {
-			SoundDirs = append(SoundDirs, file.Name()+"/")
+	if _, err = os.Stat(SoundPath); err == nil {
+		SoundFiles, err := ioutil.ReadDir(SoundPath)
+		if err != nil {
+			panic(err)
+		}
+		SoundDirs = make([]string, 0, len(SoundFiles))
+		for _, file := range SoundFiles {
+			if file.IsDir() {
+				SoundDirs = append(SoundDirs, file.Name()+"/")
+			}
 		}
 	}
 	if *version {
@@ -647,16 +654,19 @@ func SetLocales() {
 }
 
 func GetSdcv(s string) {
-	var out bytes.Buffer
+	var out, erOut bytes.Buffer
 	FoundDict = make([]string, 0, 1)
 	LastWord = s
 	args := append(SdcvArgs, s)
 	cmd := exec.Command("sdcv", args...)
-	cmd.Stderr = os.Stderr
+	cmd.Stderr = &erOut
 	cmd.Stdout = &out
 	if err := cmd.Run(); err != nil {
-		fmt.Println(err)
-		return
+		App.Stop()
+		fmt.Fprintln(os.Stderr, cmd.String())
+		fmt.Fprintln(os.Stderr, erOut.String())
+		fmt.Fprintln(os.Stderr, err)
+		os.Exit(1)
 	}
 	Rep = strings.NewReplacer("[0;34m", "", "[0m", "")
 	scanner := bufio.NewScanner(&out)

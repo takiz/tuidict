@@ -40,71 +40,71 @@ var messageKeyToIndex = map[string]int{
 	"Change focus": 10,
 	"Close":        15,
 	"Creating autocompletion cache... Please, wait.": 17,
-	"Dictionaries":              11,
-	"Disable autocompletion":    5,
-	"Enter a word or phrase":    7,
-	"Found in dictionaries":     19,
-	"History":                   12,
-	"Next":                      16,
-	"Print current version":     6,
-	"Pronounce":                 13,
-	"Quit":                      9,
-	"Search":                    14,
-	"Select":                    18,
-	"Set audio player":          3,
-	"Set history size":          0,
-	"Set sdcv custom arguments": 4,
+	"Dictionaries":             11,
+	"Disable autocompletion":   5,
+	"Disable sdcv text colors": 4,
+	"Enter a word or phrase":   7,
+	"Found in dictionaries":    19,
+	"History":                  12,
+	"Next":                     16,
+	"Print current version":    6,
+	"Pronounce":                13,
+	"Quit":                     9,
+	"Search":                   14,
+	"Select":                   18,
+	"Set audio player":         3,
+	"Set history size":         0,
 	"Set the directory with dictionary files": 2,
 	"Set the directory with sound files":      1,
 }
 
 var enIndex = []uint32{ // 21 elements
 	0x00000000, 0x00000011, 0x00000034, 0x0000005c,
-	0x0000006d, 0x00000087, 0x0000009e, 0x000000b4,
-	0x000000cb, 0x000002ae, 0x000002b3, 0x000002c0,
-	0x000002cd, 0x000002d5, 0x000002df, 0x000002e6,
-	0x000002ec, 0x000002f1, 0x00000320, 0x00000327,
-	0x0000033d,
+	0x0000006d, 0x00000086, 0x0000009d, 0x000000b3,
+	0x000000ca, 0x000002ad, 0x000002b2, 0x000002bf,
+	0x000002cc, 0x000002d4, 0x000002de, 0x000002e5,
+	0x000002eb, 0x000002f0, 0x0000031f, 0x00000326,
+	0x0000033c,
 } // Size: 108 bytes
 
-const enData string = "" + // Size: 829 bytes
+const enData string = "" + // Size: 828 bytes
 	"\x02Set history size\x02Set the directory with sound files\x02Set the di" +
-	"rectory with dictionary files\x02Set audio player\x02Set sdcv custom arg" +
-	"uments\x02Disable autocompletion\x02Print current version\x02Enter a wor" +
-	"d or phrase\x04\x01 \x00\xdd\x03\x02Welcome!\x0a\x0a Arrows/PageUp/PageD" +
-	"own/Home/End — text scrolling.\x0a F1 or Ctrl+X — quit.\x0a F2 or Ctrl+E" +
-	" — change focus between main input field and text.\x0a F3 or Ctrl+D — di" +
-	"ctionaries navigation if a word or phrase are founded.\x0a F4 or Ctrl+H " +
-	"— history.\x0a F5 or Ctrl+P — pronounce word if it exists in the insta" +
-	"lled sound base (see the color of the indicator next to the input field)" +
-	".\x0a F7 or Ctrl+F — search in the text.\x0a Use the -h command line fla" +
-	"g for more information.\x02Quit\x02Change focus\x02Dictionaries\x02Histo" +
-	"ry\x02Pronounce\x02Search\x02Close\x02Next\x02Creating autocompletion ca" +
-	"che... Please, wait.\x02Select\x02Found in dictionaries"
+	"rectory with dictionary files\x02Set audio player\x02Disable sdcv text c" +
+	"olors\x02Disable autocompletion\x02Print current version\x02Enter a word" +
+	" or phrase\x04\x01 \x00\xdd\x03\x02Welcome!\x0a\x0a Arrows/PageUp/PageDo" +
+	"wn/Home/End — text scrolling.\x0a F1 or Ctrl+X — quit.\x0a F2 or Ctrl+E " +
+	"— change focus between main input field and text.\x0a F3 or Ctrl+D — d" +
+	"ictionaries navigation if a word or phrase are founded.\x0a F4 or Ctrl+H" +
+	" — history.\x0a F5 or Ctrl+P — pronounce word if it exists in the instal" +
+	"led sound base (see the color of the indicator next to the input field)." +
+	"\x0a F7 or Ctrl+F — search in the text.\x0a Use the -h command line flag" +
+	" for more information.\x02Quit\x02Change focus\x02Dictionaries\x02Histor" +
+	"y\x02Pronounce\x02Search\x02Close\x02Next\x02Creating autocompletion cac" +
+	"he... Please, wait.\x02Select\x02Found in dictionaries"
 
 var ruIndex = []uint32{ // 21 elements
 	0x00000000, 0x0000002b, 0x00000076, 0x000000bd,
-	0x000000f2, 0x00000120, 0x00000150, 0x0000016e,
-	0x0000019a, 0x000004bc, 0x000004c7, 0x000004e1,
-	0x000004f0, 0x000004ff, 0x00000514, 0x0000051f,
-	0x0000052e, 0x00000541, 0x000005a4, 0x000005b3,
-	0x000005d6,
+	0x000000f2, 0x0000012b, 0x0000015b, 0x00000179,
+	0x000001a5, 0x000004c7, 0x000004d2, 0x000004ec,
+	0x000004fb, 0x0000050a, 0x0000051f, 0x0000052a,
+	0x00000539, 0x0000054c, 0x000005af, 0x000005be,
+	0x000005e1,
 } // Size: 108 bytes
 
-const ruData string = "" + // Size: 1494 bytes
+const ruData string = "" + // Size: 1505 bytes
 	"\x02Указать размер истории\x02Указать директорию со звуковыми файлами" +
 	"\x02Указать директорию с файлами словарей\x02Указать проигрыватель аудио" +
-	"\x02Указать аргументы для sdcv\x02Отключить автодополнение\x02Показать в" +
-	"ерсию\x02Введите слово или фразу\x04\x01 \x00\x9c\x06\x02Добро пожалова" +
-	"ть!\x0a\x0a Arrows/PageUp/PageDown/Home/End — перемотка текста.\x0a F1 " +
-	"или Ctrl+X — выход.\x0a F2 или Ctrl+E — сменить фокус между полем ввода" +
-	" и текстом.\x0a F3 или Ctrl+D — навигация по словарям, если найдено слов" +
-	"о или фраза.\x0a F4 или Ctrl+H — история.\x0a F5 или Ctrl+P — произнест" +
-	"и слово, если оно есть в установленной звуковой базе (см. цвет индикато" +
-	"ра рядом с полем ввода).\x0a F7 или Ctrl+F — поиск в тексте.\x0a Исполь" +
-	"зуйте опцию командной строки -h для показа дополнительной информации." +
-	"\x02Выход\x02Сменить фокус\x02Словари\x02История\x02Произнести\x02Поиск" +
-	"\x02Закрыть\x02Следующий\x02Создаётся кэш для автодополнения... Пожалуйс" +
-	"та, ждите.\x02Выбрать\x02Найдено в словарях"
+	"\x02Отключить цветной текст для sdcv\x02Отключить автодополнение\x02Пока" +
+	"зать версию\x02Введите слово или фразу\x04\x01 \x00\x9c\x06\x02Добро по" +
+	"жаловать!\x0a\x0a Arrows/PageUp/PageDown/Home/End — перемотка текста." +
+	"\x0a F1 или Ctrl+X — выход.\x0a F2 или Ctrl+E — сменить фокус между поле" +
+	"м ввода и текстом.\x0a F3 или Ctrl+D — навигация по словарям, если найд" +
+	"ено слово или фраза.\x0a F4 или Ctrl+H — история.\x0a F5 или Ctrl+P — п" +
+	"роизнести слово, если оно есть в установленной звуковой базе (см. цвет " +
+	"индикатора рядом с полем ввода).\x0a F7 или Ctrl+F — поиск в тексте." +
+	"\x0a Используйте опцию командной строки -h для показа дополнительной инф" +
+	"ормации.\x02Выход\x02Сменить фокус\x02Словари\x02История\x02Произнести" +
+	"\x02Поиск\x02Закрыть\x02Следующий\x02Создаётся кэш для автодополнения..." +
+	" Пожалуйста, ждите.\x02Выбрать\x02Найдено в словарях"
 
-	// Total table size 2539 bytes (2KiB); checksum: B7E90E56
+	// Total table size 2549 bytes (2KiB); checksum: A3E8121B
