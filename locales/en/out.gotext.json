@@ -1,0 +1,145 @@
+{
+    "language": "en",
+    "messages": [
+        {
+            "id": "Set history size",
+            "message": "Set history size",
+            "translation": "Set history size",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Set the directory with sound files",
+            "message": "Set the directory with sound files",
+            "translation": "Set the directory with sound files",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Set the directory with dictionary files",
+            "message": "Set the directory with dictionary files",
+            "translation": "Set the directory with dictionary files",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Set audio player",
+            "message": "Set audio player",
+            "translation": "Set audio player",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Set sdcv custom arguments",
+            "message": "Set sdcv custom arguments",
+            "translation": "Set sdcv custom arguments",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Disable autocompletion",
+            "message": "Disable autocompletion",
+            "translation": "Disable autocompletion",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Print current version",
+            "message": "Print current version",
+            "translation": "Print current version",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Enter a word or phrase",
+            "message": "Enter a word or phrase",
+            "translation": "Enter a word or phrase",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Welcome!\n\n Arrows/PageUp/PageDown/Home/End — text scrolling.\n F1 or Ctrl+X — quit.\n F2 or Ctrl+E — change focus between main input field and text.\n F3 or Ctrl+D — dictionaries navigation if a word or phrase are founded.\n F4 or Ctrl+H — history.\n F5 or Ctrl+P — pronounce word if it exists in the installed sound base (see the color of the indicator next to the input field).\n F7 or Ctrl+F — search in the text.\n Use the -h command line flag for more information.",
+            "message": "Welcome!\n\n Arrows/PageUp/PageDown/Home/End — text scrolling.\n F1 or Ctrl+X — quit.\n F2 or Ctrl+E — change focus between main input field and text.\n F3 or Ctrl+D — dictionaries navigation if a word or phrase are founded.\n F4 or Ctrl+H — history.\n F5 or Ctrl+P — pronounce word if it exists in the installed sound base (see the color of the indicator next to the input field).\n F7 or Ctrl+F — search in the text.\n Use the -h command line flag for more information.",
+            "translation": "Welcome!\n\n Arrows/PageUp/PageDown/Home/End — text scrolling.\n F1 or Ctrl+X — quit.\n F2 or Ctrl+E — change focus between main input field and text.\n F3 or Ctrl+D — dictionaries navigation if a word or phrase are founded.\n F4 or Ctrl+H — history.\n F5 or Ctrl+P — pronounce word if it exists in the installed sound base (see the color of the indicator next to the input field).\n F7 or Ctrl+F — search in the text.\n Use the -h command line flag for more information.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Quit",
+            "message": "Quit",
+            "translation": "Quit",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Change focus",
+            "message": "Change focus",
+            "translation": "Change focus",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Dictionaries",
+            "message": "Dictionaries",
+            "translation": "Dictionaries",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "History",
+            "message": "History",
+            "translation": "History",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Pronounce",
+            "message": "Pronounce",
+            "translation": "Pronounce",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Search",
+            "message": "Search",
+            "translation": "Search",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Close",
+            "message": "Close",
+            "translation": "Close",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Next",
+            "message": "Next",
+            "translation": "Next",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Creating autocompletion cache... Please, wait.",
+            "message": "Creating autocompletion cache... Please, wait.",
+            "translation": "Creating autocompletion cache... Please, wait.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Select",
+            "message": "Select",
+            "translation": "Select",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Found in dictionaries",
+            "message": "Found in dictionaries",
+            "translation": "Found in dictionaries",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        }
+    ]
+}
