@@ -318,7 +318,7 @@ func FindWord() {
 func FormatKeys(keys []Key) string {
 	res := "[-:-]"
 	for _, k := range keys {
-		res += k.Name + "[#E6DB58:#3465A4]" + " " + k.Desc + " [-:-]"
+		res += k.Name + "[#FFD75F:#3465A4]" + " " + k.Desc + " [-:-]"
 	}
 	return res
 }
@@ -537,6 +537,9 @@ func ShowDropdown(r int) {
 		for k, _ := range History {
 			opts = append(opts, k)
 		}
+		sort.Slice(opts, func(i, j int) bool {
+			return strings.ToLower(opts[i]) < strings.ToLower(opts[j])
+		})
 	} else {
 		labelText = keys + "[-:-] " + P("Found in dictionaries") + ": [-:-]"
 		opts = FoundDict
