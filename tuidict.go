@@ -546,7 +546,7 @@ func ShowDropdown(r int) {
 		opts = FoundDict
 	}
 	dropdown := tview.NewDropDown().
-		SetLabel(labelText).
+		SetLabel(labelText).SetLabelColor(tcell.ColorDefault).
 		SetFieldBackgroundColor(tcell.Color25).
 		SetFieldTextColor(tcell.Color221).
 		SetOptions(opts, nil).
