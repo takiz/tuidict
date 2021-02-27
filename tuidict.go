@@ -18,7 +18,7 @@ import (
 	"strings"
 
 	"github.com/famz/SetLocale"
-	"github.com/gdamore/tcell"
+	"github.com/gdamore/tcell/v2"
 	"github.com/rivo/tview"
 	"github.com/takiz/gostardict/stardict"
 	"golang.org/x/text/language"
